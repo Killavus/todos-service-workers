@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <title>Hello Service Workers!</title>
+
+    <script src="js/ulid.min.js"></script>
+    <script src="js/todos.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("serviceWorker.js").then(registration => {
+                console.log("SW registered! Scope is: ", registration.scope);
+            }).catch(err => {
+                console.log("SW registration failed: ", err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <main class="page">
+        <header>
+            <img src="assets/callstack.webp" width="869" height="173" alt="Callstack logo" />
+        </header>
+        <article class="todos">
+            <form id="todo-add">
+                <input type="text" name="task" placeholder="What needs to be done?" />
+            </form>
+            <ul id="todo-list"></ul>
+        </article>
+    </main>
+</body>
+</html>

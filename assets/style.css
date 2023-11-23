@@ -1,0 +1,78 @@
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fdfdfd;
+    background-color: #333333;
+}
+
+.page {
+    display: grid;
+    place-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+input[type='text'] {
+    background-color: #666666;
+    color: #fdfdfd;
+    border: 0;
+    padding: .75rem 1.25rem;
+    min-width: 300px;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input::placeholder {
+    color: #aaaaaa;
+}
+
+.todos {
+    padding: 1rem 0;
+}
+
+p {
+    margin: 0;
+}
+
+.todos ul > li {
+    list-style: none;
+    background-color: #444444;
+    padding: .75rem 1.25rem;
+    padding-left: 0.75rem;
+    border-radius: .25rem;
+    min-width: 300px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todos li > label {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.todos ul {
+    padding: 2rem 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+p.completed {
+    text-decoration: line-through;
+}
